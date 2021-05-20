@@ -1,0 +1,18 @@
+{
+  "name": "frogbot",
+  "version": "1.0.0",
+  "description": "Frog Discord Bot",
+  "main": "./src/master.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JPBBerry",
+  "license": "ISC",
+  "dependencies": {
+    "@discord-rose/cooldown-middleware": "^1.1.0",
+    "@discord-rose/flags-middleware": "^1.0.1",
+    "discord-rose": "github:discord-rose/discord-rose#build",
+    "interface": "github:jpbbots/interface",
+    "topgg-autoposter": "^1.1.9"
+  }
+}

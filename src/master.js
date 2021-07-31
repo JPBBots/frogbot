@@ -3,7 +3,7 @@ const path = require('path')
 const fetch = require('node-fetch')
 const config = require('../config')
 
-const { Interface } = require('interface')
+const { Interface } = require('@jpbbots/interface')
 const int = new Interface()
 
 const AutoPoster = require('topgg-autoposter')

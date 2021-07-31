@@ -3,7 +3,7 @@ const cooldownMiddleware = require('@discord-rose/cooldown-middleware')
 
 const fetch = require('node-fetch')
 
-const { Interface } = require('interface')
+const { Interface } = require('@jpbbots/interface')
 
 const interface = new Interface()
 

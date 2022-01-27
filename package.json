@@ -11,7 +11,7 @@
   "dependencies": {
     "@discord-rose/cooldown-middleware": "^1.1.0",
     "@discord-rose/flags-middleware": "^1.0.1",
-    "@jpbbots/interface": "^1.0.2",
+    "@jpbbots/interface": "^1.0.6",
     "discord-rose": "^1.5.0",
     "topgg-autoposter": "^1.1.9"
   }

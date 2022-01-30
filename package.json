@@ -1,18 +1,27 @@
 {
   "name": "frogbot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Frog Discord Bot",
-  "main": "./src/master.js",
+  "main": "./dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm i && tsc",
+    "start": "node --inspect=0.0.0.0:9229 ."
   },
   "author": "JPBBerry",
   "license": "ISC",
   "dependencies": {
-    "@discord-rose/cooldown-middleware": "^1.1.0",
-    "@discord-rose/flags-middleware": "^1.0.1",
-    "@jpbbots/interface": "^1.0.6",
-    "discord-rose": "^1.5.0",
-    "topgg-autoposter": "^1.1.9"
-  }
+    "@jadl/cmd": "^0.2.2",
+    "@jadl/embed": "^0.0.3",
+    "@jpbbots/interface": "^2.2.1",
+    "jadl": "^0.1.6",
+    "topgg-autoposter": "^1.1.9",
+    "undici": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/imgur-rest-api": "^3.0.31",
+    "@types/node": "^17.0.13",
+    "discord-api-types": "^0.26.0"
+  },
+  "types": "src/index.ts"
 }

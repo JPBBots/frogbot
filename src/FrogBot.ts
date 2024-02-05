@@ -4,7 +4,7 @@ import { Interface } from '@jpbbots/interface'
 
 import { GatewayIntentBits } from 'discord-api-types/v9'
 
-import { FrogComand } from './commands/Frog'
+import { FrogCommand } from './commands/Frog'
 import { ListCommand } from './commands/List'
 import { ImgurComand } from './commands/Imgur'
 
@@ -12,7 +12,7 @@ export class FrogBot extends SingleWorker {
   int = new Interface()
 
   cmd = new CommandHandler(this, [
-    FrogComand,
+    FrogCommand,
     ListCommand,
     ImgurComand
   ], {

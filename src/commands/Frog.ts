@@ -4,7 +4,7 @@ import { request } from 'undici'
 import FrogCache from "../FrogCache";
 
 @Command('frog', 'Sends a frog image')
-export class FrogComand {
+export class FrogCommand {
   @Run()
   @Thinks()
   async frog(

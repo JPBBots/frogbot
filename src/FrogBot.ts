@@ -16,7 +16,7 @@ export class FrogBot extends SingleWorker {
     ListCommand,
     ImgurComand
   ], {
-    interactionGuild: this.int.production ? undefined : '356272183166763008'
+    interactionGuild: this.int.production ? undefined : '569907007465848842'
   })
 
   constructor () {

@@ -18,8 +18,9 @@ export class FrogCommand {
     })
     @Options.String('frog', 'Specific frog to send') frog?: string
   ) {
-    // If a frog is not provided, default to random
-    const frogUrl = `https://frogs.media/api/${encodeURIComponent(frog ?? 'random')}`
+    // If a frog is not provided or its name isn't cached, default to a random frog
+    const frogName = frog && FrogCache.getCached().includes('/' + frog) ? frog : 'random'
+    const frogUrl = `https://frogs.media/api/${encodeURIComponent(frogName)}`
     const { body } = await request(frogUrl)
     const frogDetails = await body.json()
 

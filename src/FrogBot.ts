@@ -2,7 +2,7 @@ import { SingleWorker } from 'jadl'
 import { CommandHandler } from '@jadl/cmd'
 import { Interface } from '@jpbbots/interface'
 
-import { GatewayIntentBits } from 'discord-api-types'
+import { GatewayIntentBits } from 'discord-api-types/v9'
 
 import { FrogComand } from './commands/Frog'
 import { ListCommand } from './commands/List'
@@ -16,7 +16,7 @@ export class FrogBot extends SingleWorker {
     ListCommand,
     ImgurComand
   ], {
-    interactionGuild: this.int.production ? undefined : '569907007465848842'
+    interactionGuild: this.int.production ? undefined : '356272183166763008'
   })
 
   constructor () {

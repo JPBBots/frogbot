@@ -1,5 +1,5 @@
 import { Command, Run, Options, Thinks } from '@jadl/cmd'
-import { Embed } from '@jadl/embed'
+import { Embed } from '@jadl/builders'
 import { request } from 'undici'
 
 @Command('frog', 'Sends a frog image')

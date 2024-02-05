@@ -1,4 +1,4 @@
-import { Command, Run, Options, Thinks } from '@jadl/cmd'
+import { AutoComplete, Command, Run, Options, Thinks } from '@jadl/cmd'
 import { Embed } from '@jadl/builders'
 import { request } from 'undici'
 
@@ -7,6 +7,16 @@ export class FrogComand {
   @Run()
   @Thinks()
   async frog(
+    @AutoComplete(async term => {
+      const { body } = await request('https://frogs.media/api/list')
+      const list: string[] = await body.json()
+      return list
+        .filter(v => v.toLowerCase().includes(term.toLowerCase()))
+        .slice(0, 25).map(x =>  {
+          const frog = x.substring(1)
+          return { name: frog, value: frog }
+        })
+    })
     @Options.String('frog', 'Specific frog to send') frog?: string
   ) {
     if (!frog) {

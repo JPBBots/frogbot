@@ -18,20 +18,15 @@ export class FrogComand {
     })
     @Options.String('frog', 'Specific frog to send') frog?: string
   ) {
-    if (!frog) {
-      const { body } = await request('https://frogs.media/api/random')
-      const randomFrog = await body.json()
+    // If a frog is not provided, default to random
+    const frogUrl = `https://frogs.media/api/${encodeURIComponent(frog ?? 'random')}`
+    const { body } = await request(frogUrl)
+    const frogDetails = await body.json()
 
-      return new Embed()
-        .color(0x63e084)
-        .title(`${randomFrog.name[0].toUpperCase() + randomFrog.name.substr(1)} frog`, `https://frogs.media/${randomFrog.name}`)
-        .image(randomFrog.url)
-        .footer(`To see this frog again use "/frog ${randomFrog.name}"`)
-    } else {
-      return new Embed()
-        .color(0x63e084)
-        .title(`${frog} frog`)
-        .image(`https://frogs.media/api/images/${encodeURIComponent(frog)}.gif`)
-    }
+    return new Embed()
+      .color(0x63e084)
+      .title(`${frogDetails.name[0].toUpperCase() + frogDetails.name.substr(1)} frog`, `https://frogs.media/${frogDetails.name}`)
+      .image(frogDetails.url)
+      .footer(`To see this frog again use "/frog ${frogDetails.name}"`)
   }
 }

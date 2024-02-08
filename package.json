@@ -13,8 +13,8 @@
   "dependencies": {
     "@jadl/cmd": "^0.7.6",
     "@jadl/builders": "^0.1.3",
-    "@jpbbots/interface": "^2.2.2",
-    "jadl": "^0.2.0",
+    "@jpbbots/interface": "^2.5.0",
+    "jadl": "^0.2.1",
     "topgg-autoposter": "^1.1.9",
     "undici": "^4.13.0"
   },

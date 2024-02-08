@@ -1,5 +1,5 @@
 import { Command, Run, Thinks, CommandError } from '@jadl/cmd'
-import { Embed } from '@jadl/embed'
+import { Embed } from '@jadl/builders'
 import { request } from 'undici'
 
 @Command('imgur', 'Requests a random frog from imgur')
